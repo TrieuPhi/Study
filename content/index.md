@@ -1,37 +1,33 @@
 ---
-title: Welcome to My Digital Garden
+title: Welcome to My AI Blog
 ---
 
-# 👋 Chào mừng bạn đến với Blog của tôi!
+# 👋 Welcome to My AI Research Blog
 
-Đây là nơi tôi chia sẻ những suy nghĩ, kiến thức và trải nghiệm của mình. Blog này được xây dựng dựa trên [Quartz](https://quartz.jzhao.xyz) - một công cụ tuyệt vời để tạo digital garden.
+Chào mừng bạn đến với blog của tôi - nơi chia sẻ kiến thức chuyên sâu về Computer Vision và Natural Language Processing.
 
-## 🌱 Digital Garden là gì?
+## 🔍 Chủ đề chính
 
-Digital Garden không đơn thuần là một blog thông thường. Đây là một không gian nơi các ý tưởng được:
+### Computer Vision
+- Object Detection & Recognition
+- Image Segmentation
+- Face Recognition
+- Image Generation
 
-- Vun đắp và phát triển theo thời gian
-- Kết nối với nhau một cách tự nhiên
-- Chia sẻ công khai ngay cả khi chưa hoàn thiện
+### Natural Language Processing
+- Text Classification
+- Machine Translation
+- Question Answering
+- Language Generation
 
-## 📚 Bạn sẽ tìm thấy gì ở đây?
+## 📚 Series nổi bật
 
-- **Ghi chép về công nghệ**: Chia sẻ về lập trình, công cụ và workflow
-- **Sách và tư duy**: Những điều học được từ sách và suy ngẫm cá nhân
-- **Productivity**: Các phương pháp và công cụ để làm việc hiệu quả
-- **Dự án cá nhân**: Updates về những dự án tôi đang thực hiện
+- [[cv-series/object-detection|Object Detection từ cơ bản đến nâng cao]]
+- [[nlp-series/transformers|Khám phá kiến trúc Transformer]]
 
-## 🚀 Bắt đầu khám phá
+## 🆕 Bài viết mới nhất
 
-Bạn có thể:
+- [[blog/cv/yolo-explained|YOLO: Giải thích chi tiết]]
+- [[blog/nlp/bert-vietnamese|Fine-tuning BERT cho tiếng Việt]]
 
-1. Duyệt qua [[tags]] để tìm chủ đề bạn quan tâm
-2. Xem [[recent-posts|những bài viết mới nhất]]
-3. Tìm hiểu thêm về [[about|tôi và blog này]]
 
-> 💡 **Gợi ý**: Sử dụng thanh tìm kiếm ở góc trên để nhanh chóng tìm nội dung bạn cần.
-
----
-
-Cảm ơn bạn đã ghé thăm! Blog này sẽ liên tục được cập nhật với những nội dung mới.
-Hãy bookmark lại để không bỏ lỡ những chia sẻ thú vị nhé! 🌟
