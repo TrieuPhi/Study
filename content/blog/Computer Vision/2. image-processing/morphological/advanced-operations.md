@@ -146,7 +146,7 @@ zeros = size - cv2.countNonZero(image)
 if zeros == size:
 done = True
 return skel
-```
+```                           
 
 ## 7. Applications
 
