@@ -5,7 +5,7 @@ layout: about
 
 <div class="profile-container" style="display: flex; align-items: start; gap: 2rem; margin-bottom: 1rem;">
   <div class="profile-intro" style="flex: 1;">
-    <h1>🙋‍♂️ Về tôi</h1>
+    <h1> Về tôi</h1>
     <p>Xin chào! Tôi là Đái Triệu Phi, đang trong hành trình để trở thành một AI Engineer, với niềm đam mê mãnh liệt trong lĩnh vực Machine Learning và Deep Learning. Blog này là nơi tôi chia sẻ kiến thức, kinh nghiệm và các dự án AI của mình.
     Với nền tảng vững chắc về Computer Science và sự tò mò không ngừng về công nghệ, tôi luôn tin rằng AI không chỉ là một công cụ mà còn là chìa khóa để giải quyết những thách thức phức tạp trong thế giới thực.</p> 
   </div>
