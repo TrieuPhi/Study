@@ -1,0 +1,278 @@
+<!DOCTYPE html><html><head>
+      <title>Comparing Tabby with GitHub Copilot</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="report-demoing-the-benefits-of-tabby-local">Report: Demoing the Benefits of Tabby (Local) </h1>
+<p><strong>Prepared by:</strong> A&amp;I - Coder Assistant Team</p>
+<p><strong>Date:</strong> 2025-04-11</p>
+<p><strong>Demo Audience:</strong> Project Managers, Representatives from Potential Project Teams.</p>
+<p><img src="image-2.png" alt="alt text"></p>
+<p>This presentation visually and persuasively demonstrates the <strong>distinct and core</strong> benefits of using a locally run Coder Assistant (via Ollama hosting the model, Tabby as the client) compared to cloud solutions like GitHub Copilot, focusing on critical factors in an enterprise environment.</p>
+<p>"This local solution offers <strong>absolute data control and security</strong>, operates <strong>without needing internet access</strong>, and has the <strong>potential for long-term cost optimization</strong>, while still providing effective developer support, although there might be certain trade-offs in terms of speed or immediate convenience compared to Copilot."</p>
+<hr>
+<p><strong>Detailed Demo:</strong></p>
+<blockquote>
+<p><strong>1. Code Completion:</strong> Automatically completes code based on context, helping to speed up programming.<br>
+<img src="./images/gif.gif" alt="alt text"></p>
+</blockquote>
+<blockquote>
+<p><strong>2. Chat with Local Model:</strong> Interact directly with the AI model running on your machine to ask questions, explain code, or generate new code without sending data externally.<br>
+<img src="image-3.png" alt="alt text"></p>
+</blockquote>
+<blockquote>
+<p><strong>3. Apply Intelligent Changes (Apply in Editor):</strong> Preview and apply AI-suggested changes directly within the editor, similar to advanced AI IDEs.<br>
+<img src="image-4.png" alt="alt text"></p>
+</blockquote>
+<blockquote>
+<p><strong>4. Fully Offline Operation:</strong> Requires no internet connection, ensuring continuous operation and security in any environment.</p>
+</blockquote>
+<blockquote>
+<p><strong>5. Multi-Language Support:</strong> Provides suggestions for many popular programming languages.</p>
+</blockquote>
+<blockquote>
+<p><strong>6. Smooth IDE Integration:</strong> Works as a familiar extension in popular IDEs like VS Code, JetBrains IDEs, etc.</p>
+</blockquote>
+<blockquote>
+<p><strong>7. Model Flexibility:</strong> Allows choosing and switching between different AI models (e.g., models from Ollama) to suit specific requirements or available hardware.</p>
+</blockquote>
+<blockquote>
+<p><strong>8. Absolute Data Security:</strong> The entire processing and suggestion process occurs on the local machine or internal infrastructure, ensuring source code never leaves your control.</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Tabby also supports many other utilities and features yet to be explored.</strong></em></p>
+</blockquote>
+<h2 id="comparison-with-not-using-a-coding-assistant">Comparison With Not Using a Coding Assistant </h2>
+<h3 id="impact-on-development-performance">Impact on Development Performance </h3>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Without Coding Assistant</th>
+<th>With Coding Assistant (Tabby/Copilot)</th>
+<th>Improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coding Time</strong></td>
+<td>100% (baseline)</td>
+<td>Reduces coding time by 20-35%</td>
+<td><strong>↓ 20-35%</strong></td>
+</tr>
+<tr>
+<td><strong>Lines of Code/Hour</strong></td>
+<td>100% (baseline)</td>
+<td>Increases code output by 30-50%</td>
+<td><strong>↑ 30-50%</strong></td>
+</tr>
+<tr>
+<td><strong>Feature Completion Speed</strong></td>
+<td>100% (baseline)</td>
+<td>Increases by 15-30%</td>
+<td><strong>↑ 15-30%</strong></td>
+</tr>
+<tr>
+<td><strong>Reduced Context Switching</strong></td>
+<td>Frequently leave IDE for searches</td>
+<td>Reduces leaving the IDE by 40-60%</td>
+<td><strong>↓ 40-60%</strong></td>
+</tr>
+<tr>
+<td><strong>Time Searching Docs/References</strong></td>
+<td>100% (baseline)</td>
+<td>Reduces by 25-40%</td>
+<td><strong>↓ 25-40%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: These estimates are for reference only.</em></p>
+<h3 id="benefits">Benefits </h3>
+<ul>
+<li>
+<p><strong>Reduced Cognitive Load:</strong></p>
+<ul>
+<li>Developers focus on business logic instead of implementation details</li>
+<li>Less pressure to remember syntax and APIs</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Learning Experience:</strong></p>
+<ul>
+<li>The suggestion model acts as a "mentor" for junior developers</li>
+<li>Exposure to new patterns and best practices through suggestions</li>
+<li>Discover new libraries/APIs without interrupting workflow</li>
+</ul>
+</li>
+<li>
+<p><strong>Support for Developers at All Levels:</strong></p>
+<ul>
+<li>Junior: Learn to write quality code</li>
+<li>Mid-level: Increase speed and improve quality</li>
+<li>Senior: Focus on design, reduce time writing boilerplate code</li>
+</ul>
+</li>
+</ul>
+<h3 id="cost-analysis">Cost Analysis </h3>
+<ul>
+<li>
+<p><strong>Additional Costs:</strong></p>
+<ul>
+<li>Tabby: Hardware + operational costs (varies with deployment scale)</li>
+<li>Copilot: Subscription fee per user (currently around $10-19/developer/month)</li>
+</ul>
+</li>
+<li>
+<p><strong>Potential Return:</strong></p>
+<ul>
+<li>Industry studies show coding assistants can improve development efficiency</li>
+<li>Reduced time to complete programming tasks, especially for boilerplate code and repetitive tasks</li>
+<li>Return on investment depends on factors like salary levels, project types, and adoption rate</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="1-feature--benefit-comparison">1. Feature &amp; Benefit Comparison </h2>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Tabby (Local)</th>
+<th>GitHub Copilot</th>
+<th>Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security &amp; Privacy</strong></td>
+<td>Code never leaves the local machine/internal network</td>
+<td>Code is sent to Microsoft servers for processing</td>
+<td><strong>Tabby</strong></td>
+</tr>
+<tr>
+<td><strong>Network Connection</strong></td>
+<td>Operates completely offline</td>
+<td>Requires continuous internet connection</td>
+<td><strong>Tabby</strong></td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>No license fees, only hardware &amp; operational costs</td>
+<td>$10-19/user/month</td>
+<td><strong>Depends on scale</strong></td>
+</tr>
+<tr>
+<td><strong>Response Speed</strong></td>
+<td>Depends on local hardware</td>
+<td>Fast and stable due to cloud infrastructure</td>
+<td><strong>Copilot</strong></td>
+</tr>
+<tr>
+<td><strong>Suggestion Quality</strong></td>
+<td>Quite good with a suitable model, meets 80-90% of basic needs</td>
+<td>Excellent, especially for complex tasks</td>
+<td><strong>Copilot</strong></td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Full control over model, environment, data</td>
+<td>Dependent on the provider</td>
+<td><strong>Tabby</strong></td>
+</tr>
+<tr>
+<td><strong>Updates &amp; Maintenance</strong></td>
+<td>Self-managed, can be complex</td>
+<td>Automatic, managed by Microsoft</td>
+<td><strong>Copilot</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-suitable-audiences-for-each-solution">2. Suitable Audiences for Each Solution </h2>
+<h3 id="tabby-is-suitable-for">Tabby is suitable for: </h3>
+<ul>
+<li>
+<p><strong>Environments with connection restrictions:</strong></p>
+<ul>
+<li>Teams working in high-security environments with limited internet access</li>
+<li>Projects developed in locations with unstable internet connections</li>
+<li>Teams that frequently work offline (e.g., while traveling)</li>
+</ul>
+</li>
+<li>
+<p><strong>Organizations needing autonomy:</strong></p>
+<ul>
+<li>Companies wanting full control over their infrastructure</li>
+<li>Businesses wishing to avoid dependency on external service providers</li>
+<li>Organizations with strong IT teams capable of self-managing systems</li>
+</ul>
+</li>
+</ul>
+<h3 id="github-copilot-is-suitable-for">GitHub Copilot is suitable for: </h3>
+<ul>
+<li>
+<p><strong>Startups and Small to Medium Businesses (SMBs):</strong></p>
+<ul>
+<li>Need a "plug-and-play" solution without resource management overhead</li>
+<li>Do not have particularly strict security requirements</li>
+<li>Prioritize development speed and user experience</li>
+</ul>
+</li>
+<li>
+<p><strong>Individual/Freelance Developers:</strong></p>
+<ul>
+<li>Need maximum performance independent of hardware</li>
+<li>Do not have special security needs</li>
+<li>Prioritize convenience and ease of use</li>
+</ul>
+</li>
+<li>
+<p><strong>Open Source or Non-Sensitive Projects:</strong></p>
+<ul>
+<li>Code is already public or contains no sensitive information</li>
+<li>Need the highest quality suggestions possible</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-appropriate-deployment-strategy">3. Appropriate Deployment Strategy </h2>
+<h3 id="phased-rollout">Phased Rollout: </h3>
+<ol>
+<li><strong>Assess Needs:</strong> Identify security and control requirements</li>
+<li><strong>Pilot Test:</strong> Deploy Tabby to a small group (5-10 people)</li>
+<li><strong>Gather Feedback:</strong> Evaluate user experience and effectiveness</li>
+<li><strong>Optimize:</strong> Adjust configuration, model based on feedback</li>
+<li><strong>Scale Up:</strong> Roll out to other teams</li>
+</ol>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
