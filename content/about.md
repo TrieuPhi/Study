@@ -115,24 +115,22 @@ layout: about
 
 ### AI/ML
 
-- **Deep Learning:** PyTorch, TensorFlow, Keras (⭐⭐⭐⭐)
-- **Computer Vision:** OpenCV, MediaPipe, CNNs, Object Detection (e.g., YOLO - learning), Image Processing (⭐⭐⭐⭐)
-- **Machine Learning:** Scikit-learn, Regression, Classification (SVM, Trees, Forests), Clustering (K-Means), Model Evaluation, Feature Engineering (⭐⭐⭐⭐)
-- **NLP (Interest Area):** Foundational knowledge, exploring Transformers, BERT, GPT (⭐⭐)
+- **Deep Learning:** PyTorch, TensorFlow, Keras
+- **Computer Vision:** OpenCV, MediaPipe, CNNs, Object Detection (e.g., YOLO - learning), Image Processing
+- **Machine Learning:** Scikit-learn, Regression, Classification (SVM, Trees, Forests), Clustering (K-Means), Model Evaluation, Feature Engineering
+- **NLP (Interest Area):** exploring Transformers, BERT, GPT
 
 ### Programming & Data
 
-- **Languages:** Python (⭐⭐⭐⭐⭐), SQL (⭐⭐⭐⭐), R (⭐⭐), Java (⭐⭐), C#/C++ (⭐⭐), OOP Principles
-- **Data Modeling:** Relational Databases (SQL Server), Dimensional Modeling (Kimball) (⭐⭐⭐)
-- **Data Processing/Warehousing:** Apache Hive, SSIS, SSAS (⭐⭐⭐)
-- **EDA & Visualization:** Pandas, Matplotlib, Seaborn, PowerBI (⭐⭐⭐)
+- **Languages:** Python, SQL, R, Java, C#/C++, OOP Principles
+- **Data Modeling:** Relational Databases (SQL Server), Dimensional Modeling (Kimball) 
+- **EDA & Visualization:** Pandas, Matplotlib, Seaborn
 
 ### Tools & Platforms
 
-- **Version Control:** Git, GitHub (⭐⭐⭐⭐)
-- **Environments:** Jupyter Notebook, Google Colab (⭐⭐⭐⭐)
-- **Cloud (Basic Exposure):** AWS/Azure concepts (⭐⭐)
-- **Containerization (Learning):** Docker concepts (⭐)
+- **Version Control:** Git, GitHub 
+- **Environments:** Jupyter Notebook, Google Colab 
+
 
 ## 📫 Liên hệ & Social Media (Contact & Social Media)
 
