@@ -2,33 +2,28 @@
 title: Chuyên mục
 ---
 
-# Các chuyên mục chính
+# Categories
 
-## 🤖 Foundations
+## Computer Vision
 
-- [[foundations/math-for-ml|Toán cho Machine Learning]]
-- [[foundations/python-for-ml|Python cho AI/ML]]
-- [[foundations/statistics|Thống kê cho Data Science]]
+- [[../computer-vision/foundations/|Foundations]]
+- [[../computer-vision/image-processing/|Image Processing]]
+- [[../computer-vision/detection/|Detection (YOLOv8, YOLOv11)]]
+- [[../computer-vision/applications/|Applications]]
+- [[../computer-vision/deployment/|Deployment]]
 
-## 🧠 Machine Learning
+## Generative AI
 
-- [[ml/supervised-learning|Học có giám sát]]
-- [[ml/unsupervised-learning|Học không giám sát]]
-- [[ml/reinforcement-learning|Học tăng cường]]
+- [[../generative-ai/foundations/|Foundations]]
+- [[../generative-ai/rag/|RAG]]
+- [[../generative-ai/slm/|SLM]]
+- [[../generative-ai/finetune/|Finetuning]]
+- [[../generative-ai/agents/|Agents]]
 
-## 📊 Deep Learning
+## Setup Guides
 
-- [[dl/computer-vision|Computer Vision]]
-- [[dl/nlp|Natural Language Processing]]
-- [[dl/generative-ai|Generative AI]]
-
-## ⚙️ MLOps & Tools
-
-- [[mlops/deployment|Triển khai mô hình]]
-- [[mlops/monitoring|Giám sát mô hình]]
-- [[mlops/best-practices|Best Practices]]
-
-## 💼 Case Studies
-
-- [[cases/real-world|Cases Studies thực tế]]
-- [[cases/interviews|Phỏng vấn AI Engineer]]
+- [[../setup-guides/linux-wsl/|Linux and WSL]]
+- [[../setup-guides/python-env/|Python Environment and Miniconda]]
+- [[../setup-guides/docker/|Docker]]
+- [[../setup-guides/git/|Git]]
+- [[../setup-guides/dev-tools/|Developer Tools]]

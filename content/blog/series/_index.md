@@ -2,25 +2,28 @@
 title: Series Bài Viết
 ---
 
-# Series Bài Viết
+# Series and Learning Paths
 
-## 🎓 Machine Learning từ Zero to Hero
+## Path 1: Computer Vision Practitioner
 
-1. [[ml-zero-hero/part1|Phần 1: Nền tảng Machine Learning]]
-2. [[ml-zero-hero/part2|Phần 2: Linear Regression & Logistic Regression]]
-3. [[ml-zero-hero/part3|Phần 3: Decision Trees & Random Forests]]
-4. [[ml-zero-hero/part4|Phần 4: Support Vector Machines]]
+1. [[../setup-guides/linux-wsl/install-wsl2-on-windows-step-by-step|Install WSL2 on Windows]]
+2. [[../setup-guides/python-env/miniconda-workflow-for-ml-projects|Miniconda Workflow for ML Projects]]
+3. [[../computer-vision/foundations/programming/python-basics|Python Basics]]
+4. [[../computer-vision/foundations/programming/opencv-introduction|OpenCV Introduction]]
+5. [[../computer-vision/image-processing/transformations/geometric|Geometric Transformations]]
 
-## 🔥 Deep Learning với PyTorch
+## Path 2: YOLO Application Track
 
-1. [[pytorch-series/basics|PyTorch Cơ bản]]
-2. [[pytorch-series/cnn|Convolutional Neural Networks]]
-3. [[pytorch-series/rnn|Recurrent Neural Networks]]
-4. [[pytorch-series/transformers|Transformers]]
+1. [[../computer-vision/foundations/math/linear-algebra|Linear Algebra]]
+2. [[../computer-vision/foundations/math/probability-statistics|Probability and Statistics]]
+3. [[../computer-vision/detection/|Detection Hub]]
+4. YOLOv8 end-to-end on custom dataset (planned)
+5. YOLOv11 upgrade and benchmark (planned)
 
-## 🚀 MLOps trong thực tế
+## Path 3: Generative AI Engineer
 
-1. [[mlops-series/intro|Giới thiệu về MLOps]]
-2. [[mlops-series/ci-cd|CI/CD cho ML Projects]]
-3. [[mlops-series/monitoring|Monitoring và Logging]]
-4. [[mlops-series/deployment|Deployment Strategies]]
+1. [[../generative-ai/foundations/|GenAI Foundations]]
+2. [[../generative-ai/rag/|RAG Hub]]
+3. [[../generative-ai/slm/|SLM Hub]]
+4. [[../generative-ai/finetune/|Finetuning Hub]]
+5. [[../generative-ai/agents/|Agents Hub]]

@@ -23,31 +23,21 @@ Computer Vision (CV) là lĩnh vực trong AI giúp máy tính có khả năng "
 ## 📚 Lộ trình học tập
 
 ### 1. Kiến thức tiên quyết
-- [[prerequisites/math/linear-algebra|Đại số tuyến tính]]
-- [[prerequisites/math/probability-statistics|Xác suất thống kê]]
-- [[prerequisites/math/signal-processing|Xử lý tín hiệu]]
-- [[prerequisites/programming/python-basics|Lập trình Python]]
-- [[prerequisites/programming/opencv-introduction|OpenCV cơ bản]]
+- [[foundations/math/linear-algebra|Đại số tuyến tính]]
+- [[foundations/math/probability-statistics|Xác suất thống kê]]
+- [[foundations/math/signal-processing|Xử lý tín hiệu]]
+- [[foundations/programming/python-basics|Lập trình Python]]
+- [[foundations/programming/opencv-introduction|OpenCV cơ bản]]
 
 ### 2. Xử lý ảnh
 - [[image-processing/transformations/geometric|Biến đổi hình học]]
 - [[image-processing/enhancement/histogram|Cải thiện hình ảnh]]
 - [[image-processing/morphological/basic-operations|Phép toán hình thái học]]
 
-### 3. Trích xuất đặc trưng
-- [[feature-extraction/edge-detection/introduction|Phát hiện cạnh]]
-- [[feature-extraction/corner-detection/harris|Phát hiện góc]]
-- [[feature-extraction/descriptors/sift|Bộ mô tả đặc trưng]]
-
-### 4. Deep Learning trong CV
-- [[deep-learning/cnn/introduction|CNN]]
-- [[deep-learning/gan/basics|GAN]]
-- [[deep-learning/transformers/vision-transformer|Vision Transformers]]
-
-### 5. Ứng dụng
-- [[applications/classification/introduction|Phân loại ảnh]]
-- [[applications/object-detection/yolo|Phát hiện đối tượng]]
-- [[applications/segmentation/semantic|Phân đoạn ảnh]]
+### 3. Hướng ứng dụng (đang mở rộng)
+- [[detection/|Detection với YOLOv8/YOLOv11]]
+- [[applications/|Application case studies]]
+- [[deployment/|Deployment và tối ưu suy luận]]
 
 ## 🛠️ Công cụ cần thiết
 
@@ -94,4 +84,4 @@ Computer Vision (CV) là lĩnh vực trong AI giúp máy tính có khả năng "
    - Deep Learning
    - Computer Vision: Models, Learning, and Inference
 
-[Bắt đầu với Kiến thức tiên quyết →]
+[Bắt đầu với Kiến thức tiên quyết →](./foundations/)
