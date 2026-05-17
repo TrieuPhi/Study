@@ -184,7 +184,7 @@ Cách thu thập và tổ chức folder dữ liệu.
 Kỹ thuật RecursiveCharacterTextSplitter để giữ ngữ cảnh.
 
 ### IV.4. Xây dựng Vector Database
-Sử dụng ChromaDB để lưu trữ vector embeddings.
+Sử dụng ChromaDB để lưu trữ vector embeddings.`
 
 ### IV.5. Khởi tạo LLM và xây dựng RAG Chain
 Kết nối Retriever với LLM qua LangChain LCEL.
